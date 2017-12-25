@@ -1,0 +1,11 @@
+logs
+target
+tmp
+lib_managed
+RUNNING_PID
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+
