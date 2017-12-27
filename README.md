@@ -13,6 +13,9 @@ Other links with information:
 * Sign up for [AWS](https://aws.amazon.com/)
 * Go to the AWS Lambda consolea and create a new [Lambda function](http://docs.aws.amazon.com/lambda/latest/dg/lambda-app.html).
   * Create a role that includes **writing logs into AWS CloudWatch** (otherwise no in-app logs will appear in CloudWatch)
+  * To set the **handler function** in AWS:
+    * Set the _handler_ in the AWS console as `example.MyHandler::handler` if `MyHandler` is an object and `handler` is the function.
+    * Set the _handler_ in the AWS console as `example.MyHandler` if `MyHandler` is a a class (It needs to extend some request handler class/interface in `com.amazonaws.services.lambda.runtime`)
   * Use **at least** 512 MB RAM and 5 seconds timeout.
 * In this project's root directory run
   ```
