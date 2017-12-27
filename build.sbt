@@ -8,7 +8,12 @@ lazy val root = (project in file(".")).
     version := "1.0",
     scalaVersion := "2.11.4",
     retrieveManaged := true,
-    libraryDependencies += "com.amazonaws" % "aws-lambda-java-core"  % "1.1.0"
+    libraryDependencies ++= Seq(
+      "com.amazonaws" %  "aws-lambda-java-core"        % "1.1.0",
+      "io.circe"      %% "circe-core"                  % "0.7.0",
+      "io.circe"      %% "circe-generic"               % "0.7.0",
+      "io.circe"      %% "circe-parser"                % "0.7.0"
+    )
   )
 
 assemblyMergeStrategy :=
