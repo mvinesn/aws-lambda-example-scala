@@ -4,7 +4,7 @@ scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf
 
 lazy val root = (project in file(".")).
   settings(
-    name := "lambda-demo",
+    name := "aws-lambda-example",
     version := "1.0",
     scalaVersion := "2.11.4",
     retrieveManaged := true,

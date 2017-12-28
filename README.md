@@ -21,7 +21,7 @@ Other links with information:
   ```
   $ sbt assembly
   ```
-  * Upload the file `target/scala-2.11/lambda-demo-assembly-1.0.jar` when creating the lambda
+  * Upload the file `target/scala-2.11/aws-lambda-example-assembly-1.0.jar` when creating the lambda
 * When testing your lambda on AWS console:
   * Make sure the test data can be deserialized into the data type of the first parameter of the handler.
 
