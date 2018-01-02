@@ -1,0 +1,37 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AWS Lambda",
+		"_postman_id": "1d8c56a1-ed8a-01dd-9c30-214eb0a768ce",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lambda Test on Test Env",
+			"request": {
+				"url": "{{scheme}}://{{server}}/test/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reqTime\": 1234,\n    \"data\": \"request data\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
