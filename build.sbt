@@ -1,3 +1,5 @@
+import com.typesafe.sbt.packager.universal.ZipHelper
+
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint")
 
 scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
@@ -15,9 +17,13 @@ lazy val root = (project in file(".")).
       "io.circe"      %% "circe-parser"                % "0.7.0"
     )
   )
+  .enablePlugins(JavaAppPackaging)
 
-assemblyMergeStrategy :=
+
+packageBin in Universal :=
   {
-    case PathList("META-INF", xs @ _*) => MergeStrategy.discard
-    case x => MergeStrategy.first
+    val artifactPath = (packageBin in Universal).value
+    val theMappings = (mappings in packageBin in Universal).value
+    ZipHelper.zip(theMappings, artifactPath)
+    artifactPath
   }
